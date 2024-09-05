@@ -10,11 +10,11 @@ class ImageDescriptionApp(tk.Tk):
         self.title("Image Description Viewer")
         self.geometry("800x600")
 
-        self.image_folder = os.path.dirname(os.path.abspath(__file__))
+        self.image_folder = os.path.dirname(os.path.abspath(__file__)) # Caminho atual de aonde as imagens estão.
         self.descriptions = {}
         self.load_descriptions()
 
-        self.canvas = tk.Canvas(self, bg="gray")
+        self.canvas = tk.Canvas(self, bg="#ffe400")
         self.scroll_y = ttk.Scrollbar(self, orient="vertical", command=self.canvas.yview)
 
         self.frame = tk.Frame(self.canvas, bg="gray")
@@ -48,7 +48,7 @@ class ImageDescriptionApp(tk.Tk):
 
         entry = ttk.Entry(self.frame, width=100)
         entry.pack(pady=5)
-        entry.insert(0, self.descriptions.get(file_name, "Enter description here..."))
+        entry.insert(0, self.descriptions.get(file_name, "Coloque sua descrição aqui"))
 
         button = ttk.Button(self.frame, text="Save", command=lambda: self.save_description(file_name, entry.get()))
         button.pack(pady=5)
