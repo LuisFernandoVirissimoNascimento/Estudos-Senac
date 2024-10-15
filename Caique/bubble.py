@@ -6,6 +6,5 @@ def bubble_sort(lista):
                 lista[bottomInt], lista[bottomInt+1] = lista[bottomInt+1], lista[bottomInt]
     return lista
 
-# Exemplo de uso
 numeros = [int(input(f"Digite o {i+1}º número: ")) for i in range(5)]
 print("Lista ordenada:", bubble_sort(numeros))
