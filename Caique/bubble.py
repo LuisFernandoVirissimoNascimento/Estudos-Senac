@@ -1,9 +1,9 @@
 def bubble_sort(lista):
-    n = len(lista)
-    for i in range(n):
-        for j in range(0, n-i-1):
-            if lista[j] > lista[j+1]:
-                lista[j], lista[j+1] = lista[j+1], lista[j]
+    lenghtLista = len(lista)
+    for topInt in range(lenghtLista):
+        for bottomInt in range(0, lenghtLista-topInt-1):
+            if lista[bottomInt] > lista[bottomInt+1]:
+                lista[bottomInt], lista[bottomInt+1] = lista[bottomInt+1], lista[bottomInt]
     return lista
 
 # Exemplo de uso
