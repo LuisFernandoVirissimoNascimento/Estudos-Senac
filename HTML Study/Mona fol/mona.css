@@ -1,0 +1,42 @@
+
+body{
+    height: 1000px;
+    width: auto;
+    background-image: linear-gradient(rgb(221, 242, 255), rgb(60, 255, 255));
+}
+
+.mona-container{
+    display: grid;
+    grid-template-columns: repeat(5, 0fr);
+    justify-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    gap: 40px;
+    align-items: start;
+}
+
+img{
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.mona{
+    background-image: linear-gradient(rgb(177, 223, 250), rgb(60, 255, 255));
+    border-radius: 20px;
+    box-shadow: 0px 20px 20px 6px rgb(0 0 0 / 62%);
+}
+
+p{
+    margin: -2px;
+    padding: 16px;
+    border: solid 3px black;
+    color: white;
+    font-size: 16px;
+    word-spacing: 16px;
+    text-align: justify;
+    line-height: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}

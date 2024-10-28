@@ -1,0 +1,76 @@
+header {
+    position: sticky;
+    z-index: 9999;   /* Ensures it's on top of everything */
+    top: 0;
+    padding: 10px 360px;
+    height: auto; /* Adjusts height based on content */
+    width: 100%; /* Ensures full width of the viewport */
+    background: #000000;
+    color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box; /* Ensures padding is included in the total size */
+}
+
+img{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    overflow: hidden;
+    
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.header-text{
+    font-weight: bolder;
+    font-size: large;
+}
+
+.image-main-container {
+    position: relative;
+    text-align: center;
+    color: white; 
+    font-family: Arial, sans-serif;
+    height: 879px;
+    overflow: hidden;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+a:link {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(170, 170, 170);
+    text-decoration: underline;
+  }
+  
+  /* selected link */
+  a:active {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }

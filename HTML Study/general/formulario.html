@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>formulário 1</title>
+</head>
+<body>
+  <form>
+    <!-- Dados Pessoais -->
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+       
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required>
+       
+        <label for="data_nascimento">Data de Nascimento:</label>
+        <input type="date" id="data_nascimento" name="data_nascimento" required>
+    </fieldset>
+ 
+    <!-- Endereço -->
+    <fieldset>
+        <legend>Endereço</legend>
+        <label for="rua">Rua:</label>
+        <input type="text" id="rua" name="rua" required>
+       
+        <label for="numero">Número:</label>
+        <input type="text" id="numero" name="numero" required>
+       
+        <label for="bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" required>
+       
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required>
+       
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado" required>
+    </fieldset>
+ 
+    <!-- Dados Financeiros -->
+    <fieldset>
+        <legend>Dados Financeiros</legend>
+        <label for="renda">Renda Mensal:</label>
+        <input type="number" id="renda" name="renda" required>
+       
+        <label for="dividas">Dívidas:</label>
+        <input type="number" id="dividas" name="dividas">
+    </fieldset>
+ 
+    <!-- Dados Comerciais -->
+    <fieldset>
+        <legend>Dados Comerciais</legend>
+        <label for="empresa">Nome da Empresa:</label>
+        <input type="text" id="empresa" name="empresa" required>
+       
+        <label for="cargo">Cargo:</label>
+        <input type="text" id="cargo" name="cargo" required>
+       
+        <label for="tempo_servico">Tempo de Serviço:</label>
+        <input type="text" id="tempo_servico" name="tempo_servico">
+    </fieldset>
+ 
+    <!-- Cadastro Veículo -->
+    <fieldset>
+        <legend>Cadastro Veículo</legend>
+        <label for="modelo_veiculo">Modelo do Veículo:</label>
+        <input type="text" id="modelo_veiculo" name="modelo_veiculo" required>
+       
+        <label for="placa">Placa:</label>
+        <input type="text" id="placa" name="placa" required>
+    </fieldset>
+ 
+    <!-- Cadastro Imóvel -->
+    <fieldset>
+        <legend>Cadastro Imóvel</legend>
+        <label for="tipo_imovel">Tipo de Imóvel:</label>
+        <input type="text" id="tipo_imovel" name="tipo_imovel" required>
+       
+        <label for="endereco_imovel">Endereço do Imóvel:</label>
+        <input type="text" id="endereco_imovel" name="endereco_imovel" required>
+    </fieldset>
+ 
+    <!-- Dados Cônjuge -->
+    <fieldset>
+        <legend>Dados Cônjuge</legend>
+        <label for="nome_conjuge">Nome do Cônjuge:</label>
+        <input type="text" id="nome_conjuge" name="nome_conjuge">
+       
+        <label for="cpf_conjuge">CPF do Cônjuge:</label>
+        <input type="text" id="cpf_conjuge" name="cpf_conjuge">
+    </fieldset>
+ 
+    <!-- Dados Filhos -->
+    <fieldset>
+        <legend>Dados Filhos</legend>
+        <label for="nome_filho">Nome do Filho:</label>
+        <input type="text" id="nome_filho" name="nome_filho">
+       
+        <label for="data_nascimento_filho">Data de Nascimento:</label>
+        <input type="date" id="data_nascimento_filho" name="data_nascimento_filho">
+    </fieldset>
+ 
+    <!-- Dados Formação Escola -->
+    <fieldset>
+        <legend>Dados Formação Escola</legend>
+        <label for="escola">Nome da Escola:</label>
+        <input type="text" id="escola" name="escola" required>
+       
+        <label for="ano_conclusao">Ano de Conclusão:</label>
+        <input type="number" id="ano_conclusao" name="ano_conclusao" required>
+    </fieldset>
+ 
+    <button type="submit">Enviar</button>
+</form>
+</body>
+</html>
