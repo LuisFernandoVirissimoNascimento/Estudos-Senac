@@ -1,3 +1,5 @@
+
+
 header {
     position: sticky;
     z-index: 9999;   /* Ensures it's on top of everything */
@@ -13,7 +15,7 @@ header {
     box-sizing: border-box; /* Ensures padding is included in the total size */
 }
 
-img{
+.img-page{
     border: 0px;
     margin: 0px;
     padding: 0px;
@@ -26,6 +28,7 @@ body{
     margin: 0px;
     padding: 0px;
     border: 0px;
+    display: grid;
 }
 
 .header-text{
@@ -49,6 +52,17 @@ body{
     transform: translate(-50%, -50%);
     font-size: 3rem;
     font-weight: bold;
+}
+
+.centered-main{
+  background-color: rgb(46, 46, 46);
+  color: white;
+  justify-items: center;
+}
+
+.two-texts-one-image-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 
