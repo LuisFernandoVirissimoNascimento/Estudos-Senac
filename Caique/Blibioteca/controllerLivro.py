@@ -31,6 +31,7 @@ class ControllerLivro:
         bd = Database("10.28.2.69","suporte","suporte","blibioteca")
         bd.conectar()
 
+
         bd.cursor.execute()
         bd.conexao.commit()
         bd.desconectar()

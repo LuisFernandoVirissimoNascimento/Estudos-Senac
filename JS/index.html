@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <p>Faça um programa que receba uma temperatura e transforme de Fahrenheit para Celsius. A formula de conversão de Fahrenheit para Celsius é a seguinte: C = (5/9) * (F – 32).
+        <br>
+        Utilize o prompt do JS para captar os dados, e utilize o alerta para mostrar.
+        Mostrar 0 casas decimais.
+    </p>
+    <button id="b_conversao">Fahrenheit para Celsius</button>
+    <p>Faça um programa que leia o nome de um produto, a quantidade comprada, o valor unitário e o percentual de desconto a ser aplicado para o
+        pagamento.<br>
+        Imprima na tela com o alert o nome do produto e o valor total da venda.
+        </p>
+    <button id="b_produto">Produto</button>
+
+    <p>Faça um programa que leia um valor em reais e calcule o valor equivalente em dólares. <br>O usuário deve informar, além do valor em reais da compra, o valor da cotação do dólar.
+    </p>
+    <button id="b_dolar">Converta para Dólar</button>
+    <script>
+        function converterTemperatura() {
+            // Parse float tenta converter uma string a um numero. Seja inteiro ou Float. Ele para no primeiro NaN ( Not a Number ) se tiver texto, mas se tiver texto antes de um numero, ele quebra pois não existe numero com texto.
+            let fahrenheit = parseFloat(prompt("Coloque a temperatura em Fahrenheit: "));
+
+            // A Função isNaN checa se o texto dado não é um numero. Se der NaN eu aviso isso e dou retorno, quebrando a função e retornando nada.
+            if (isNaN(fahrenheit)) {
+                alert("Por favor digite numeros válidos.");
+                return;
+            }
+
+            let celsius = (5 / 9) * (fahrenheit - 32);
+
+            // Mostra o resultado, usando math.round para tirar os 0.
+            alert(`A Temperatura em Celsius é: ${Math.round(celsius)}`);
+        }
+
+        // Para conseguir usar a função criada, eu pego o ID do botão que criei ali encima e aplico a função no click dele.
+        document.getElementById("b_conversao").onclick = converterTemperatura;
+
+        // Tarefa do produto agora
+
+        function vendaProduto(){
+            // Vamos ler os nomes em seguida.
+            let nomeProduto = prompt("Qual o nome do produto?");
+            let valor = prompt("Qual o preço ?");
+            // Cheque se tem mais de 2 numeros após a virgula.
+            let numerosPosPonto = 0;
+            for (let i = 0; i < valor.length; i++){
+                if(numerosPosPonto > 0){
+                    numerosPosPonto++;
+                }
+                if(numerosPosPonto >= 4){
+                    alert("Três ou mais numeros pós o ponto, por favor digite um valor correto.");
+                    return;
+                }
+                if (valor[i] == "."){
+                    numerosPosPonto++;
+                    // Agora que numerosPosVirgula é 1, o if acima ativa e começa a contar, se chegar a ser >= 3 então nois retorna e avisa q ta errado.         
+                }
+            }
+            parseFloat(valor);
+            // A Função isNaN checa se o texto dado não é um numero. Se der NaN eu aviso isso e dou retorno, quebrando a função e retornando nada.
+            if (isNaN(valor)) {
+                alert(isNaN(valor));
+                alert(valor);
+                alert("Por favor digite um preço válido.");
+                return;
+            }
+
+            // Agora a porcentagem é aplicado a mesma lógica, mas vemos também se é menor que 0
+            let porcentagem = prompt("Qual o preço ?");
+            // Cheque se tem mais de 2 numeros após a virgula.
+            let numerosPosPontoPorcentagem = 0;
+            for (let i = 0; i < porcentagem.length; i++){
+                if(numerosPosPontoPorcentagem  > 0){
+                    numerosPosPontoPorcentagem ++;
+                }
+                if(numerosPosPontoPorcentagem >= 3){
+                    alert("Dois ou mais numeros pós o ponto, por favor digite um valor correto.");
+                    return;
+                }
+                if (valor[i] == "."){
+                    numerosPosPontoPorcentagem ++;
+
+                    // Agora que numerosPosVirgula é 1, o if acima ativa e começa a contar, se chegar a ser >= 3 então nois retorna e avisa q ta errado.         
+                }
+            }
+            parseFloat(porcentagem);
+            // A Função isNaN checa se o texto dado não é um numero. Se der NaN eu aviso isso e dou retorno, quebrando a função e retornando nada.
+            if (isNaN(porcentagem)) {
+                alert("Por favor digite uma porcentagem valida. EX : 99.9");
+                return;
+            }
+
+            // Agora cheque se é maior que 100 ou menor que 0.
+            if (porcentagem > 100 || porcentagem < 0){
+                alert("Não pode ser menor que 0 ou maior que 100.")
+                return;
+            }
+            let valorTotal = (valor - (valor * (porcentagem / 100))).toFixed(2)
+            alert(`Nome do Produto ${nomeProduto}, Valor total R$${valorTotal}`);
+
+        }
+
+        document.getElementById("b_produto").onclick = vendaProduto;
+
+        // Agora a conversão em dolar.
+    function converterDolar(){
+        // Leitura do valor em reais
+        let reais = parseFloat(prompt("Qual o valor em reais?"));
+
+        // Checa se o valor em reais é válido
+        if (isNaN(reais)) {
+            alert("Por favor, digite um valor válido em reais.");
+            return;
+        }
+
+        // Leitura da cotação do dólar
+        let cotacaoDolar = 5.82
+
+        // Checa se a cotação do dólar é válida
+        if (isNaN(cotacaoDolar)) {
+            alert("Por favor, digite um valor válido para a cotação do dólar.");
+            return;
+        }
+
+        // Calcula o valor em dólares
+        let valorDolar = (reais / cotacaoDolar).toFixed(2);
+
+        // Exibe o resultado
+        alert(`O valor equivalente em dólares é: $${valorDolar}`);
+    }
+
+    document.getElementById("b_dolar").onclick = converterDolar;
+    </script>
+
+</body>
+</html>
