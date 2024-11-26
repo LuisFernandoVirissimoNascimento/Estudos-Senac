@@ -23,6 +23,10 @@
     </p>
     <button id="b_dolar">Converta para Dólar</button>
     <script>
+
+        var p1 = window.document.getElementsByTagName('p')[1];
+        p1.style.background = "blue";
+
         function converterTemperatura() {
             // Parse float tenta converter uma string a um numero. Seja inteiro ou Float. Ele para no primeiro NaN ( Not a Number ) se tiver texto, mas se tiver texto antes de um numero, ele quebra pois não existe numero com texto.
             let fahrenheit = parseFloat(prompt("Coloque a temperatura em Fahrenheit: "));
