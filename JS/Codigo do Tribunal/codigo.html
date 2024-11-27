@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <input type="text" placeholder="Digite o codigo tribunal" class="input required" oninput="tribuValidate()">
+            <span class="span-required">O numero deve ter o padrão tribunal</span>
+        </div>
+    </div>
+
+    <script>
+        const codigo_tribunal = /^\d{7}-\d{2}\.\d{4}$/;
+            
+        const inputs = document.querySelectorAll('.required');
+        const spans = document.querySelectorAll('.span-required');
+        function tribuValidate(){
+            if(!codigo_tribunal.test(inputs[0].value)){
+                SetError(0);
+            }else{
+                HideError(0);
+            }
+        }
+
+        function SetError(index){
+            spans[index].style.display = 'block'
+            spans[index].style.color = 'red'
+        }
+
+        function HideError(index){
+            spans[index].style.display = 'none'
+        }
+
+    </script>
+</body>
+</html>
